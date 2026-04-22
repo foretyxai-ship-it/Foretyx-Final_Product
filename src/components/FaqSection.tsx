@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const faqs = [
   {
@@ -36,11 +37,29 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a,
+    },
+  })),
+};
+
 const FaqSection = () => {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section id="faq" className="bg-card py-24 px-6 md:px-12">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <span className="section-label mb-6 block">FAQ</span>

@@ -40,16 +40,16 @@ const Navbar = () => {
       <div className="flex items-center gap-8">
         {!isTeamPage && (
           <>
-            <a href="#how-it-works" className="font-mono text-[12px] uppercase tracking-[0.2em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
+            <a href="#how-it-works" aria-label="Navigate to How It Works section" className="font-mono text-[12px] uppercase tracking-[0.2em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
               How It Works
             </a>
-            <a href="#approach" className="font-mono text-[12px] uppercase tracking-[0.1em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
+            <a href="#approach" aria-label="Navigate to Why Foretyx section" className="font-mono text-[12px] uppercase tracking-[0.1em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
               Why Foretyx
             </a>
-            <a href="#use-cases" className="font-mono text-[12px] uppercase tracking-[0.2em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
+            <a href="#use-cases" aria-label="Navigate to Use Cases section" className="font-mono text-[12px] uppercase tracking-[0.2em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
               Use Cases
             </a>
-            <a href="#faq" className="font-mono text-[12px] uppercase tracking-[0.2em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
+            <a href="#faq" aria-label="Navigate to FAQ section" className="font-mono text-[12px] uppercase tracking-[0.2em] text-primary-foreground/70 hover:text-primary-foreground transition-all">
               FAQ
             </a>
           </>
