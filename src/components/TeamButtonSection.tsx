@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 import sohamImg from "../team-pics/soham pic.jpeg";
@@ -52,13 +52,13 @@ const TeamButtonSection = () => {
           ))}
         </div>
 
-        <button
-          onClick={() => navigate("/team")}
+        <Link
+          to="/team"
           className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-black hover:bg-[#ADE1ED] transition-all duration-300 rounded-full font-bold text-sm tracking-wider uppercase overflow-hidden"
         >
           <span className="relative z-10">View Full Team</span>
           <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-        </button>
+        </Link>
       </div>
     </section>
   );
