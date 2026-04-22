@@ -23,7 +23,7 @@ const TerminalSection = () => {
               <div className="w-3 h-3 rounded-full bg-destructive/60" />
               <div className="w-3 h-3 rounded-full bg-warning/60" />
               <div className="w-3 h-3 rounded-full bg-success/60" />
-              <span className="font-mono text-[10px] text-muted-foreground ml-2">foretyx://localhost · offline</span>
+              <span className="font-mono text-[10px] text-muted-foreground ml-2">foretyx://On Device · offline</span>
             </div>
             <div className="p-6 font-mono text-sm space-y-2">
               <p className="text-primary">λ foretyx init</p>

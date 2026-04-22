@@ -1,18 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
+import sohamImg from "../team-pics/soham pic.jpeg";
+import soumikImg from "../team-pics/soumik pic.jpeg";
+import rishiImg from "../team-pics/rishi pic.jpeg";
+import upasnaImg from "../team-pics/upasna pic.jpeg";
+
 const teamPreview = [
-  { name: "Soham Singh", avatar: "S" },
-  { name: "Soumik Misra", avatar: "S" },
-  { name: "Rishi Ghosh", avatar: "R" },
-  { name: "Upasana Mishra", avatar: "U" },
+  { name: "Soham Singh", image: sohamImg },
+  { name: "Soumik Misra", image: soumikImg },
+  { name: "Rishi Ghosh", image: rishiImg },
+  { name: "Upasna Mishra", image: upasnaImg },
 ];
 
 const TeamButtonSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-[#0a0a0a] py-32 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
+    <section id="team-preview" className="bg-[#0a0a0a] py-32 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#ADE1ED]/5 blur-[120px] rounded-full -z-10" />
 
@@ -25,13 +30,17 @@ const TeamButtonSection = () => {
           <span className="text-white/40">know the cost of data leaks.</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
           {teamPreview.map((member, idx) => (
-            <div key={idx} className="flex flex-col items-center gap-3">
-              <div className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#ADE1ED]/30 transition-all duration-500">
-                <span className="text-lg font-black text-white/20">{member.avatar}</span>
+            <div key={idx} className="flex flex-col items-center gap-3 group">
+              <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden group-hover:border-[#ADE1ED]/30 transition-all duration-500">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <span className="text-[10px] font-mono text-white/40 uppercase tracking-widest">{member.name}</span>
+              <span className="text-[9px] font-mono text-white/40 uppercase tracking-widest group-hover:text-white transition-colors">{member.name}</span>
             </div>
           ))}
         </div>

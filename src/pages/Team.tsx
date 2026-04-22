@@ -12,7 +12,7 @@ const TeamPage = () => {
       <div className="pt-32 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <Link 
-            to="/" 
+            to="/#team-preview" 
             className="inline-flex items-center gap-2 text-white/40 hover:text-[#ADE1ED] transition-colors font-mono text-[10px] uppercase tracking-widest mb-12"
           >
             <ArrowLeft className="w-4 h-4" />

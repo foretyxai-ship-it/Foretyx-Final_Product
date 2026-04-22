@@ -70,7 +70,7 @@ Foretyx uses a **Sidecar Architecture**:
 *   **Soham Singh**: CEO & Co-founder (Product Strategy & Control Plane)
 *   **Soumik Misra**: CTO & Co-founder (Data Plane & ML Architecture)
 *   **Rishi Ghosh**: COO & Co-founder (Deployment & Infrastructure)
-*   **Upasana Mishra**: Business & GTM Lead (Partnerships & Compliance)
+*   **Upasna Mishra**: Business & GTM Lead (Partnerships & Compliance)
 
 ---
 

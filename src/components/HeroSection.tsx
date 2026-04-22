@@ -2,7 +2,13 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section relative min-h-screen px-6 md:px-12 pt-6 pb-12 overflow-hidden flex flex-col">
+    <section id="hero" className="hero-section relative min-h-screen px-6 md:px-12 pt-6 pb-12 overflow-hidden flex flex-col">
+      {/* Logo moved here to scroll away naturally */}
+      <div className="py-4">
+        <a href="/" className="font-mono text-2xl font-bold tracking-tighter text-primary-foreground">
+          FORETYX
+        </a>
+      </div>
       {/* --- BACKGROUND TEXT --- */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden opacity-[0.03]">
         <div className="flex animate-marquee whitespace-nowrap">
@@ -16,7 +22,7 @@ const HeroSection = () => {
 
 
       {/* --- MAIN CONTENT --- */}
-      <div className="relative z-10 max-w-4xl mt-32 mb-auto">
+      <div className="relative z-10 max-w-4xl mt-12 mb-auto">
         {/* mt-8 pulls the headline close to the logo, my-auto keeps the content vertically balanced */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-[-0.04em] text-primary-foreground mb-8">
           Your employees use AI.
