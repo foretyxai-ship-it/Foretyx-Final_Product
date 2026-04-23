@@ -4,10 +4,10 @@ const HeroSection = () => {
   return (
     <section id="hero" className="hero-section relative min-h-screen px-6 md:px-12 pt-6 pb-12 overflow-hidden flex flex-col">
       {/* Logo moved here to scroll away naturally */}
-      <div className="py-4">
-        <a href="/" className="flex items-center gap-3 group">
-          <img src="/logo.png" alt="Foretyx Logo" className="w-8 h-8 object-contain" />
-          <span className="font-mono text-2xl font-bold tracking-tighter text-primary-foreground">
+      <div className="py-3 md:py-4">
+        <a href="/" className="flex items-center gap-2 md:gap-3 group">
+          <img src="/logo.png" alt="Foretyx Logo" className="w-6 h-6 md:w-8 md:h-8 object-contain" />
+          <span className="font-mono text-xl md:text-2xl font-bold tracking-tighter text-primary-foreground">
             FORETYX
           </span>
         </a>
@@ -25,14 +25,13 @@ const HeroSection = () => {
 
 
       {/* --- MAIN CONTENT --- */}
-      <div className="relative z-10 max-w-4xl mt-12 mb-auto">
-        {/* mt-8 pulls the headline close to the logo, my-auto keeps the content vertically balanced */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-[-0.04em] text-primary-foreground mb-8">
+      <div className="relative z-10 max-w-4xl mt-6 md:mt-12 mb-auto">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-[-0.04em] text-primary-foreground mb-6 md:mb-8">
           Your employees use AI.
           <br />
           Your data shouldn't leave the building.
         </h1>
-        <p className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mb-10 font-sans">
+        <p className="text-base md:text-xl text-primary-foreground/70 max-w-2xl mb-8 md:mb-10 font-sans">
           Foretyx is an on-device AI security gateway. It intercepts employee prompts before they reach any external LLM scrubbing PII, blocking injections, and enforcing your org's policies. Entirely on your infrastructure. Zero raw data ever leaves unprotected.
         </p>
         <div className="flex flex-wrap gap-4 mt-6">

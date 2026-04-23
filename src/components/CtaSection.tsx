@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+
+const FORMSPREE_ID = "mnjlorvr";
 
 const CtaSection = () => {
   const [email, setEmail] = useState("");
@@ -16,30 +17,24 @@ const CtaSection = () => {
     setError("");
 
     try {
-      if (!supabase) {
-        console.warn("Supabase not configured, skipping save.");
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
         setSubmitted(true);
-        return;
-      }
-
-      const { error: supabaseError } = await supabase
-        .from("waitlist")
-        .insert([{ email }]);
-
-      if (supabaseError) {
-        if (supabaseError.code === "23505") {
-          // Duplicate email
-          setError("You're already on the list!");
-        } else {
-          setError("Something went wrong. Please try again.");
-          console.error("Supabase error:", supabaseError);
-        }
       } else {
-        setSubmitted(true);
+        const data = await response.json();
+        setError(data?.errors?.[0]?.message || "Something went wrong. Please try again.");
       }
     } catch (err) {
       setError("Network error. Please try again.");
-      console.error("Network error:", err);
+      console.error("Formspree error:", err);
     } finally {
       setLoading(false);
     }
@@ -97,4 +92,3 @@ const CtaSection = () => {
 };
 
 export default CtaSection;
-
